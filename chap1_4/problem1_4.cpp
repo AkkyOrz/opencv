@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
     input_index = argv[1];
     cap.open(input_index);
   }else{
-    cap.open(1);
+    cap.open(0);
   }
   if(!cap.isOpened()){
     printf("Cannot open the video.\n");
