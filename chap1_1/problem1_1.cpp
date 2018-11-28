@@ -32,9 +32,9 @@ int main(int argc, char *argv[])
     exit(0);
   }
 
-  //convertColorToGray(input, processed);
-  convertSmoothing(input, processed);
-  //getEdge(input, processed);
+  convertColorToGray(input, processed);
+  //convertSmoothing(input, processed);
+  getEdge(input, processed);
 
 
   // 5. create windows
@@ -55,7 +55,7 @@ int main(int argc, char *argv[])
 
   // 8. save the processed result
   /* hatena */
-  cv::imwrite("result/1_1_smooth.jpg", processed);
+  cv::imwrite("result/1_1_edge.jpg", processed);
 
   return 0;
 }

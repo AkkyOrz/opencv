@@ -50,8 +50,8 @@ void myRectNetaHandler(int event, int x, int y, int flags, void *){
 
   bool isLButtonPressedAfterEvent = (event == CV_EVENT_LBUTTONUP) && isPointed;
   if(isLButtonPressedAfterEvent){
-    //cv::rectangle(inpaint_mask, prevPt, pt, cv::Scalar(255), 5, 8, 0);
-    //cv::rectangle(whiteLined_image, prevPt, pt, cv::Scalar::all(255), 5, 8, 0);
+    cv::rectangle(inpaint_mask, prevPt, pt, cv::Scalar(255), 5, 8, 0);
+    cv::rectangle(whiteLined_image, prevPt, pt, cv::Scalar::all(255), 5, 8, 0);
     cv::Mat inpaint_mask_rect(inpaint_mask, cv::Rect(pt, prevPt));
     cv::Mat whiteLined_image_rect(whiteLined_image, cv::Rect(pt, prevPt));
     cv::bitwise_not(inpaint_mask_rect, inpaint_mask_rect);
